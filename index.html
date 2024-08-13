@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.T. Heroes</title>
+    <style>
+        html, body {
+            overflow: auto; /* Ensure scrolling is enabled */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Space Mono', monospace;
+            background-color: #222222; /* Black background */
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #562020; /* Dark red color */
+            color: #e0e0e0;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        header a {
+            color: #e0e0e0;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: right;
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        .button {
+            height: 40px;
+            background: #222222; /* Black button */
+            border: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .services {
+            margin: 40px 0;
+            width: 100%;
+        }
+        .services h2 {
+            text-align: center;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+        }
+        .service-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .service {
+            background: #f7ecd8; /* Cream color */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 20px); /* Three services per row */
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+        .service:hover {
+            transform: translateY(-10px);
+        }
+        .service h3 {
+            margin-top: 0;
+            color: #8B0000; /* Dark red color */
+        }
+        .service p {
+            color: #333;
+        }
+        .service a {
+            color: #8B0000; /* Dark red color */
+            text-decoration: none;
+        }
+        .gallery {
+            margin: 40px 0;
+            height: 650px;
+            width: 100%;
+            background-color: #f7ecd8; /* Cream color */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .gallery h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .gallery-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            background: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 20px); /* Three items per row */
+            box-sizing: border-box;
+            max-width: 300px;
+        }
+
+    .gallery .button {
+        display: block;
+        width: 200px; /* Adjust width as needed */
+        height: 25px;
+        margin: 20px auto; /* Center the button horizontally */
+        padding: 12px 0; /* Add vertical padding */
+        background-color: #8B0000; /* Dark red background */
+        color: #fff; /* White text */
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px; /* Adjust font size */
+        font-weight: bold;
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .gallery .button:hover {
+        background-color: #562020; /* Darker shade for hover effect */
+        transform: scale(1.05); /* Slightly enlarge the button */
+    }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about {
+            background: #562020; /* Black background */
+            border-radius: 10px;
+            color: #e0e0e0;
+            padding: 40px 20px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 650px; /* Set a fixed height to make the section a square */
+        }
+
+        .about img {
+            width: 200px;
+            height: 350px;
+            border-radius: 10px; /* Remove border-radius to make the image a square */
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #e0e0e0; /* Set text color to white */
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+
+        .spacer {
+            height: 20px; /* Adjust the height as needed */
+        }
+
+        footer {
+            background-color: #f7ecd8; /* Cream color background */
+            color: #000000; /* Black text color */
+            text-align: center;
+            padding: 20px 0;
+            width: 100%; /* Make the footer span the full width */
+            position: relative;
+        }
+
+        .footer-content {
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        footer h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><img src="newLogo.png" alt="IT Heroes Logo" class="logo" width="100" height="100"> I.T. Heroes</h1>
+            </div>
+            <nav>
+                <ul> 
+
+                    <li><a href="bookingPage.html" class="button">Contact Here</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="services container">
+        <h2>Our Services</h2>
+        <div class="service-row">
+            <div class="service">
+                <h3><a href="bookingPage.html">Hardware Repair</a></h3>
+                <p>Fixing or replacing damaged components such as hard drives, motherboards, power supplies, and more.</p>
+            </div>
+            <div class="service">
+                <h3><a href="bookingPage.html">Custom PC Building</a></h3>
+                <p>Designing and assembling custom-built computers tailored to the customer's specifications and needs.</p>
+            </div>
+            <div class="service">
+                <h3><a href="bookingPage.html">Virus and Malware Removal</a></h3>
+                <p>Detecting and removing viruses, malware, spyware, and other malicious software from computers.</p>
+            </div>
+            <div class="service">
+                <h3><a href="bookingPage.html">Software Troubleshooting</a></h3>
+                <p>Diagnosing and resolving software issues, including operating system errors, application crashes, and compatibility problems.</p>
+            </div>
+            <div class="service">
+                <h3><a href="bookingPage.html">System Upgrades</a></h3>
+                <p>Upgrading hardware components such as RAM, storage, and graphics cards to improve system performance.</p>
+            </div>
+            <div class="service">
+                <h3><a href="bookingPage.html">Network Setup and Troubleshooting</a></h3>
+                <p>Setting up and configuring wired and wireless networks, as well as diagnosing and fixing network connectivity issues.</p>
+            </div>
+            <div class="service">
+                <h3><a href="bookingPage.html">Data Backup Solutions</a></h3>
+                <p>Implementing data backup strategies and solutions to protect important data from loss or corruption. </p>
+            </div>
+            <div class="service">
+                <h3><a href="bookingPage.html">IT Consulting</a></h3>
+                <p>Offering advice and solutions for businesses and individuals on IT-related matters, including network security, system optimization, and technology upgrades.</p>
+            </div>
+            <div class="service">
+                <h3><a href="bookingPage.html">Battery Replacement (Laptops)</a></h3>
+                <p>Is your laptop battery not holding a charge like it used to? I can replace your old battery with a new one, ensuring your laptop runs smoothly and efficiently.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery container">
+        <h2>PC Builds</h2>
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="pic1.jpg" alt="Description of image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="pic2.jpg" alt="Description of image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="pic4.jpg" alt="Description of image 3">
+                
+            </div>  
+             
+        </div>
+        <a href="moreBuilds.html" class="button">View More</a>  
+    </section>
+
+    <section class="about container">
+        <h2>About Me</h2>
+        <img src="caleb.jpg" alt="Image">
+        <p>
+            Hi, my name is Caleb. I have had a life long interest in learning everything I can about computers. I began to learn to code in middle school after I built my first computer. 
+            Throughout the years before college, I was highly interested in machine learning and cybersecurity. During college, I gained an interest in learning about hardware design and embedded programming.
+            When I am not working on personal projects, I enjoy playing video games on my computer and PS5, spending time with my fiancée, and keeping up to date on chip manufacturing and computer architecture.
+            <div style="height: 50px;"></div>
+            <b>My Education</b>
+            <div style="height: 50px;"></div>
+            I hold a Bachelor’s in Science in Computer Science with a minor in Mathematics and I am certified in Computer Systems Repair.
+        </p>
+    </section>
+
+    <div style="height: 50px;"></div>
+
+    <footer>
+        <div class="footer-content">
+            <h2>Contact Information</h2>
+            <p>Columbus IN</p>
+            <p>304-887-8068</p>
+            <p>it-heroes@outlook.com</p>
+            <p>&copy; 2024 I.T. Heroes. All rights reserved.</p>
+        </div>
+    </footer>
