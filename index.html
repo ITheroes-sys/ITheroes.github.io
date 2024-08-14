@@ -217,6 +217,108 @@
             font-size: 18px;
         }
 
+        /* phone fix */
+    @media screen and (max-width: 768px) {
+            header #branding h1 {
+            font-size: 24px;
+    }
+
+        header li {
+            display: block;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header #branding {
+            float: none;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service-row, .gallery-row {
+            flex-direction: column;
+        }
+
+        .service, .gallery-item {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+
+        .about {
+            padding: 20px 10px;
+        }
+
+        .about img {
+            width: 100%;
+            height: auto;
+        }
+
+        .footer-content {
+            padding: 10px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        header #branding h1 {
+            font-size: 20px;
+        }
+
+        .button {
+            font-size: 16px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .about p {
+            font-size: 16px;
+        }
+    }
+
+/* gallery  on smaller screens */
+    @media screen and (max-width: 768px) {
+        .gallery-row {
+            flex-direction: column; /* Stack gallery items vertically */
+            align-items: center; /* Center align items */
+        }
+
+        .gallery-item {
+            flex: 1 1 100%; /* Make each gallery item take full width */
+            max-width: 100%;
+            margin: 10px 0; /* Add vertical margin between items */
+        }
+
+        .gallery img {
+            width: 100%; /* Ensure images fit the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .gallery .button {
+            width: 100%; /* Make button full width */
+            font-size: 16px; /* Adjust font size */
+            padding: 10px; /* Adjust padding */
+        }
+    }
+
+
+    /*mobile about me section */
+    @media screen and (max-width: 768px) {
+        .about {
+            padding: 20px; /* Reduce padding for smaller screens */
+            height: auto; /* Allow height to adjust to content */
+        }
+
+        .about img {
+            width: 80%; /* Reduce image width for better fit */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Keep some spacing below the image */
+        }
+
+        .about p {
+            font-size: 16
+        }
+    }
     </style>
 </head>
 <body>
