@@ -11,5 +11,5 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     const subject = `New Booking Request from ${name}`;
     const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Date: ${date}\nPreferred Time: ${time}\nIssue: ${issue}`;
 
-    window.location.href = `mailto:it-heroes@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:itheroesofficial@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
